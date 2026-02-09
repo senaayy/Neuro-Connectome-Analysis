@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  neuro-lab:
+    build: .
+    ports:
+      - "8888:8888"  # Jupyter portunu dışarı aç
+    volumes:
+      - ./work:/home/jovyan/work  # SENİN bilgisayarındaki 'work' klasörünü konteynera bağla
+    environment:
+      - JUPYTER_ENABLE_LAB=yes  # Modern arayüzü aç
+      - JUPYTER_TOKEN=neuro  # Şifre olarak "neuro" kullanacağız (Kolaylık olsun)
+    container_name: neuro_connectome_lab
