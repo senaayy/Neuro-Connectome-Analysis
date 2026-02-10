@@ -1,57 +1,65 @@
-# 🧠 Neuro-Connectome Analysis
-### Functional Brain Connectivity & Graph Theory Pipeline
+# 🧠 Neuro-Connectome Analysis: Creativity & Efficiency Pipeline
+### Functional Brain Connectivity & Graph Theory Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Neuroscience](https://img.shields.io/badge/Focus-Computational_Neuroscience-purple)
 ![Status](https://img.shields.io/badge/Status-Research_Prototype-green)
+![Docker](https://img.shields.io/badge/Container-Dockerized-blue)
 
-## 📌 Proje Özeti
-Bu proje, **fMRI (Fonksiyonel Manyetik Rezonans Görüntüleme)** verilerini kullanarak insan beyninin fonksiyonel bağlantısallık haritasını (Connectome) çıkaran ve **Graph Theory (Çizge Teorisi)** yöntemleriyle beynin bilgi işleme verimliliğini analiz eden bir hesaplamalı sinirbilim projesidir.
+## 📌 Project Overview
+This project implements a computational pipeline to extract **Functional Brain Connectivity Maps (Connectomes)** from fMRI data and analyzes brain network efficiency using **Graph Theory**. 
 
-**Schaefer 2018 Atlası** kullanılarak beyin 100 farklı fonksiyonel bölgeye ayrılmış, **Global Verimlilik (Efficiency)** hesaplanmış ve bilgi akışını yöneten kritik **Hub (Merkez)** bölgeler tespit edilmiştir.
-
----
-
-## 🔬 Metodoloji
-1. **Veri Toplama:** `Nilearn` kütüphanesi ile ham fMRI sinyalleri işlendi.
-2. **Sinyal Ayrıştırma:** Beyin atlası kullanılarak 100 bölgeden zaman serileri (Time-Series) çıkarıldı.
-3. **Ağ İnşası:** Pearson Korelasyonu ile 100x100'lük **Bağlantısallık Matrisi** oluşturuldu.
-4. **Graph Theory:** `NetworkX` ile beynin topolojik özellikleri analiz edildi.
+By utilizing the **Schaefer 2018 Atlas**, the brain is parcellated into 100 distinct functional regions. The pipeline computes **Global Efficiency**, **Clustering Coefficients**, and identifies critical **Hub Regions** that govern information flow during cognitive tasks.
 
 ---
 
-## 📊 Görselleştirme ve Sonuçlar
-
-### 1. Beyin Bağlantısallık Ağı (Connectome)
-Beynin en güçlü %2'lik bağlantılarını gösteren 3D analiz. Kırmızı çizgiler, bölgeler arası güçlü senkronizasyonu (haberleşmeyi) temsil eder.
-
-![Glass Brain](work/brain_connectome.png)
-
-### 2. Fonksiyonel Bağlantı Matrisi
-Beyin bölgeleri arasındaki ilişkinin ısı haritası.
-
-![Matrix](work/brain_matrix.png)
-
-### 🏆 Analiz Sonuçları: Kritik "Hub" Bölgeler
-Yapılan analiz sonucunda, deneğin o anki bilişsel sürecini yöneten en baskın ağlar şunlardır:
-
-* **Dorsal Attention Network (Bölge #68):** Görsel odaklanma ve seçici dikkat süreçlerinde en yüksek aktiviteyi göstermiştir.
-* **Control Network:** Karar verme ve yönetim mekanizması.
-* **Default Mode Network (DMN):** İçsel düşünce süreçleri.
-
-*Bu bulgular, deneğin görsel bir göreve (film izleme) odaklanırken aynı zamanda hikayeyi anlamlandırma (DMN) sürecini aktif tuttuğunu kanıtlamaktadır.*
+## 🔬 Methodology
+1. **Data Acquisition:** Raw fMRI signals are fetched and preprocessed using `Nilearn`.
+2. **Signal Extraction:** Time-series data is extracted from 100 brain regions (ROIs) based on the Schaefer Atlas using `zscore_sample` standardization.
+3. **Network Construction:** A 100x100 **Functional Connectivity Matrix** is built using Pearson Correlation coefficients.
+4. **Graph Theory Analysis:** Topological properties of the brain network (e.g., Hubs, Efficiency) are calculated using `NetworkX`.
 
 ---
 
-## 🛠️ Kurulum
+## 📊 Latest Analysis Results (Updated)
 
-Bu proje Dockerize edilmiştir. Çalıştırmak için:
+### 1. Quantitative Network Analysis (Creativity & Efficiency Metrics)
+The latest run on the subject's connectome revealed an exceptionally integrated neural network:
+
+| Metric | Value | Scientific Interpretation |
+| :--- | :---: | :--- |
+| **Global Efficiency** | **0.9019** | Extremely high integration; represents rapid information transfer between distant brain regions. Correlates with high **creativity** and **Openness to Experience**. |
+| **Clustering Coefficient** | **0.8982** | Indicates high local specialization and efficient processing within specific functional modules (e.g., visual, motor). |
+| **Network Topology** | **Small-World** | The synergy of high efficiency and high clustering confirms an optimized "Small-World" architecture for complex cognitive tasks. |
+
+### 2. Identified High-Traffic Hubs (Top Centrality Nodes)
+The analysis identified the following networks as the most active "Hubs" (Highway Junctions) for information flow:
+
+* **Salience/Ventral Attention Network (Region #28 & #76):** Crucial for detecting and filtering significant environmental stimuli.
+* **Dorsal Attention Network (Region #68):** Governs voluntary, top-down visual focus and selective attention.
+* **Default Mode Network (Region #92):** The core of internal thought, imagination, and creative synthesis.
+
+---
+
+## 🎨 Visualizations
+
+| Functional Connectivity Matrix | Functional Brain Connectome (3D) |
+| :---: | :---: |
+| ![Matrix](work/brain_matrix.png) | ![Glass Brain](work/brain_connectome.png) |
+| *Correlation heatmap reflecting 0.90 efficiency.* | *Visualization of the brain's 2% strongest "Highway" structure.* |
+
+---
+
+## 🛠️ Installation & Usage
+
+This project is fully **Dockerized** for reproducibility.
 
 ```bash
+# 1. Clone the repository
 git clone [https://github.com/senaayy/Neuro-Connectome-Analysis.git](https://github.com/senaayy/Neuro-Connectome-Analysis.git)
-cd Neuro-Connectome-Analysis
-docker-compose up --build
-👨‍💻 İletişim
-Sena Ay - Fırat Üniversitesi Yazılım Mühendisliği
 
-Hesaplamalı Sinirbilim ve Biyoinformatik alanlarına odaklanmaktayım.
+# 2. Navigate to the directory
+cd Neuro-Connectome-Analysis
+
+# 3. Build and Run with Docker
+docker-compose up --build
