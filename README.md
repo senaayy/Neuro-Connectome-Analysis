@@ -63,3 +63,8 @@ cd Neuro-Connectome-Analysis
 
 # 3. Build and Run with Docker
 docker-compose up --build
+```
+👨‍💻 Contact
+Sena Ay - Software Engineering Student @ Fırat University
+
+Focusing on Computational Neuroscience & Bioinformatics.
