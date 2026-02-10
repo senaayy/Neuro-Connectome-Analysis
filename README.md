@@ -1,4 +1,3 @@
-Markdown
 # 🧠 Neuro-Connectome Analysis: Creativity & Efficiency Pipeline
 ### Functional Brain Connectivity & Graph Theory Analysis
 
@@ -22,7 +21,7 @@ By utilizing the **Schaefer 2018 Atlas**, the brain is parcellated into 100 dist
 
 ---
 
-## 📊 Latest Analysis Results
+## 📊 Latest Analysis Results (Updated)
 
 ### 1. Quantitative Network Analysis (Creativity & Efficiency Metrics)
 The latest run on the subject's connectome revealed an exceptionally integrated neural network:
@@ -46,46 +45,49 @@ The analysis identified the following networks as the most active "Hubs" (Highwa
 
 | Functional Connectivity Matrix | Functional Brain Connectome (3D) |
 | :---: | :---: |
-| ![Matrix](brain_matrix.png) | ![Glass Brain](brain_connectome.png) |
+| ![Matrix](work/brain_matrix.png) | ![Glass Brain](work/brain_connectome.png) |
 | *Correlation heatmap reflecting 0.90 efficiency.* | *Visualization of the brain's 2% strongest "Highway" structure.* |
 
 ---
 
 ## 🛠️ Installation & Usage
 
-### 🐍 Standard Local Installation
-1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/senaayy/Neuro-Connectome-Analysis.git](https://github.com/senaayy/Neuro-Connectome-Analysis.git)
-   cd Neuro-Connectome-Analysis
-Setup Virtual Environment:
+This project is fully **Dockerized** to ensure reproducibility and ease of setup.
 
- ```bash
-python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
-Install Dependencies:
-```
- ```bash
-pip install -r requirements.txt
-Run Analysis: Open and run the cells in Brain_Analysis.ipynb.
-```
-🐳 Docker Installation (Recommended)
-This project is fully Dockerized for reproducibility.
+---
 
- ```bash
+### 🐳 Option 1: Run with Docker (Recommended)
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/senaayy/Neuro-Connectome-Analysis.git
+
+# 2. Navigate to the project directory
+cd Neuro-Connectome-Analysis
+
+# 3. Build and run the project
 docker-compose up --build
- ```
-📂 Project Structure
-Plaintext
-├── Brain_Analysis.ipynb    # Core analysis notebook
-├── brain_matrix.png        # Generated Heatmap
-├── brain_connectome.png    # Generated 3D Glass Brain
-├── Dockerfile              # Container configuration
-├── docker-compose.yml      # Orchestration file
-├── requirements.txt        # Python dependencies
-├── work/                   # Project workspace
-└── README.md               # Project documentation
-👨‍💻 Author
+Docker will handle all dependencies and environment setup automatically.
+
+🐍 Option 2: Standard Local Installation (Without Docker)
+If you prefer to run the analysis locally:
+
+1. Create a Virtual Environment
+python -m venv venv
+Activate the environment:
+
+Windows
+
+.\venv\Scripts\activate
+Linux / macOS
+
+source venv/bin/activate
+2. Install Dependencies
+pip install -r requirements.txt
+3. Run the Analysis
+Open Brain_Analysis.ipynb and run the cells step by step.
+```
+👨‍💻 Contact
 Sena Ay - Software Engineering Student @ Fırat University
 
 Focusing on Computational Neuroscience & Bioinformatics.
