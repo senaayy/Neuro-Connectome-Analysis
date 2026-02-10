@@ -1,3 +1,4 @@
+Markdown
 # 🧠 Neuro-Connectome Analysis: Creativity & Efficiency Pipeline
 ### Functional Brain Connectivity & Graph Theory Analysis
 
@@ -21,7 +22,7 @@ By utilizing the **Schaefer 2018 Atlas**, the brain is parcellated into 100 dist
 
 ---
 
-## 📊 Latest Analysis Results (Updated)
+## 📊 Latest Analysis Results
 
 ### 1. Quantitative Network Analysis (Creativity & Efficiency Metrics)
 The latest run on the subject's connectome revealed an exceptionally integrated neural network:
@@ -45,26 +46,46 @@ The analysis identified the following networks as the most active "Hubs" (Highwa
 
 | Functional Connectivity Matrix | Functional Brain Connectome (3D) |
 | :---: | :---: |
-| ![Matrix](work/brain_matrix.png) | ![Glass Brain](work/brain_connectome.png) |
+| ![Matrix](brain_matrix.png) | ![Glass Brain](brain_connectome.png) |
 | *Correlation heatmap reflecting 0.90 efficiency.* | *Visualization of the brain's 2% strongest "Highway" structure.* |
 
 ---
 
 ## 🛠️ Installation & Usage
 
-This project is fully **Dockerized** for reproducibility.
+### 🐍 Standard Local Installation
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/senaayy/Neuro-Connectome-Analysis.git](https://github.com/senaayy/Neuro-Connectome-Analysis.git)
+   cd Neuro-Connectome-Analysis
+Setup Virtual Environment:
 
-```bash
-# 1. Clone the repository
-git clone [https://github.com/senaayy/Neuro-Connectome-Analysis.git](https://github.com/senaayy/Neuro-Connectome-Analysis.git)
-
-# 2. Navigate to the directory
-cd Neuro-Connectome-Analysis
-
-# 3. Build and Run with Docker
-docker-compose up --build
+ ```bash
+python -m venv venv
+source venv/bin/activate  # Windows: .\venv\Scripts\activate
+Install Dependencies:
 ```
-👨‍💻 Contact
+ ```bash
+pip install -r requirements.txt
+Run Analysis: Open and run the cells in Brain_Analysis.ipynb.
+```
+🐳 Docker Installation (Recommended)
+This project is fully Dockerized for reproducibility.
+
+ ```bash
+docker-compose up --build
+ ```
+📂 Project Structure
+Plaintext
+├── Brain_Analysis.ipynb    # Core analysis notebook
+├── brain_matrix.png        # Generated Heatmap
+├── brain_connectome.png    # Generated 3D Glass Brain
+├── Dockerfile              # Container configuration
+├── docker-compose.yml      # Orchestration file
+├── requirements.txt        # Python dependencies
+├── work/                   # Project workspace
+└── README.md               # Project documentation
+👨‍💻 Author
 Sena Ay - Software Engineering Student @ Fırat University
 
 Focusing on Computational Neuroscience & Bioinformatics.
