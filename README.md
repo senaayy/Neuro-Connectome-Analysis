@@ -24,13 +24,13 @@ By utilizing the **Schaefer 2018 Atlas**, the brain is parcellated into 100 dist
 ## 📊 Latest Analysis Results (Updated)
 
 ### 1. Quantitative Network Analysis (Creativity & Efficiency Metrics)
-The latest run on the subject's connectome revealed an exceptionally integrated neural network:
+⚠️ **Sample note:** This run uses a single subject (`n_subjects=1`) from Nilearn's public "development fMRI" dataset — not a personally scanned subject, and no personality assessment was administered. The metrics below describe this one connectome's graph properties; any link to traits like creativity or Openness to Experience is a general association reported in the literature (not something measured or tested in this analysis), so it is noted as background context rather than a finding.
 
-| Metric | Value | Scientific Interpretation |
+| Metric | Value | What it measures |
 | :--- | :---: | :--- |
-| **Global Efficiency** | **0.9019** | Extremely high integration; represents rapid information transfer between distant brain regions. Correlates with high **creativity** and **Openness to Experience**. |
-| **Clustering Coefficient** | **0.8982** | Indicates high local specialization and efficient processing within specific functional modules (e.g., visual, motor). |
-| **Network Topology** | **Small-World** | The synergy of high efficiency and high clustering confirms an optimized "Small-World" architecture for complex cognitive tasks. |
+| **Global Efficiency** | **0.9019** | How efficiently information can travel between distant brain regions in this one connectome. High Global Efficiency is associated in the literature with traits like creativity and Openness to Experience, but that link was not tested here (N=1, no personality measure). |
+| **Clustering Coefficient** | **0.8982** | Local specialization — how tightly interconnected a region's immediate neighbors are (e.g., within visual or motor modules), for this one subject. |
+| **Network Topology** | **Small-World** | The combination of high efficiency and high clustering is consistent with a "Small-World" architecture, a common (not unique) finding in brain network studies. |
 
 ### 2. Identified High-Traffic Hubs (Top Centrality Nodes)
 The analysis identified the following networks as the most active "Hubs" (Highway Junctions) for information flow:
